@@ -1,2 +1,66 @@
 # Pea-Ish
-A Pea-like Info Grabber
+
+
+<div id="top"></div>
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/MattSteedWork/Pea-Ish/">
+    <img src="https://github.com/MattSteedWork/Pea-Ish/blob/main/Images/peaScreen.png" alt="Logo" width="1600" height="600">
+  </a>
+
+<h3 align="center">Pea-Ish</h3>
+
+  <p align="center">
+    A Pea-like Info Grabber
+    <br />
+   </div>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Pea-Ish is an automated Bash script that grabs the following potentially helpful information from a compromised machine. 
+
+1. Dirty Netwrok Ping Sweep
+2. Linux Version
+3. Whami/ID
+4. SUIDs
+5. Passwd (Stripping out all No Login)
+6. Running Processes
+7. Apache Files?
+8. Sudo Token Vuln Check
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Installation
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/MattSteedWork/Pea-Ish.git
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+ ```sh
+#########################################################################
+#./Peaish.sh -h or --help                          Display Help Text    #
+#./Peaish.sh -o or --output (filename) + IP        Writes Output To File#
+#./Peaish.sh -v or --verbose + IP                  Verbose Mode         #
+#                                                                       #
+# DONT FORGET TO ADD THE FIRST THREE NUMBERS OF THE MACHINES IP ADDRESS #
+# example:                                                              #
+#         ./Peaish.sh -v 192.168.1                                      #
+#########################################################################
+   ```
+
+
+
