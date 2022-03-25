@@ -198,29 +198,6 @@ echo "$(tput setaf 0)$(tput setab 4)        ########Running Processes########   
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 ps aux
 
-#echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
-#echo "$(tput setaf 0)$(tput setab 4)        ########    Apache???    ########       $(tput sgr 0)"
-#echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
-#FILE1=/etc/apache2/httpd.conf
-#if test -f "$FILE1"; then
-#    echo "$FILE1 exists."
-#  else echo "$FILE1 not found"
-#fi
-#FILE2=/etc/apache2/apache2.conf
-#if test -f "$FILE2"; then
-#    echo "$FILE2 exists."
-#  else echo "$FILE2 not found"
-#fi
-#FILE3=/etc/httpd/httpd.conf
-#if test -f "$FILE3"; then
-#    echo "$FILE3 exists."
-#  else echo "$FILE3 not found"
-#fi
-#FILE4=/etc/httpd/conf/httpd.conf
-#if test -f "$FILE4"; then
-#    echo "$FILE4 exists."
-#  else echo "$FILE4 not found"
-#fi
 
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 echo "$(tput setaf 0)$(tput setab 4)        ######       Versions      ######       $(tput sgr 0)"
