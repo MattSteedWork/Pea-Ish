@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/MattSteedWork/Pea-Ish/">
-    <img src="https://github.com/MattSteedWork/Pea-Ish/blob/main/Images/peaScreen.png" alt="Logo" width="1600" height="600">
+    <img src="https://github.com/MattSteedWork/Pea-Ish/blob/main/Images/pea.png" alt="Logo" width="1600" height="600">
   </a>
 
 <h3 align="center">Pea-Ish</h3>
