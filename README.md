@@ -27,13 +27,12 @@ Pea-Ish is an automated Bash script that grabs the following potentially helpful
 
 1. Netwrok Ping Sweep
 2. Prints Linux Version
-3. Whami/ID
+3. Whoami/ID
 4. Prints SUIDs
 5. Prints Passwd (Stripping out all No Login)
 6. Prints Running Processes
 7. Prints Versions Of Sudo/Mysql/Apache
-8. Checks For Sudo Token Vulnerability
-9. Checks For Dirty Pipe Vulnerability
+8. Checks If Vulnerable to Dirty Pipe
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -54,12 +53,11 @@ Pea-Ish is an automated Bash script that grabs the following potentially helpful
  ```sh
 #########################################################################
 #./Peaish.sh -h or --help                          Display Help Text    #
-#./Peaish.sh -o or --output (filename) + IP        Writes Output To File#
-#./Peaish.sh -v or --verbose + IP                  Verbose Mode         #
+#./Peaish.sh -o or --output (filename)             Writes Output To File#
+#./Peaish.sh -v or --verbose                       Verbose Mode         #
 #                                                                       #
-# DONT FORGET TO ADD THE FIRST THREE NUMBERS OF THE MACHINES IP ADDRESS #
 # example:                                                              #
-#         ./Peaish.sh -v 192.168.1                                      #
+#         ./Peaish.sh -v                                                #
 #########################################################################
    ```
 
