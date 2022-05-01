@@ -7,7 +7,6 @@
 function ipp()
 {
 ip a | grep "scope" | grep -v "127.0.0.1" | grep "brd"  | grep -Po '(?<=inet) [\d.]+' | sed 's/\.[0-9]*$//' > ip.txt 
-cat ip.txt
 return
 }
 
@@ -32,7 +31,6 @@ then
 else
     echo Vulnerable
 fi
-
 rm ip.txt
 echo "$(tput setaf 0)$(tput setab 2)"
   echo "              ####  ##### #####        ###### ##### #   #                "
@@ -123,7 +121,8 @@ exit
 
 
 #Verbose Or No Arguments
-function normal(){
+function normal()
+{
 
 echo "$(tput setaf 0)$(tput setab 2)"
   echo "              ####  ##### #####        ###### ##### #   #                "
@@ -158,8 +157,19 @@ echo "$(tput setaf 4)$(tput setab 2)        #################################   
 
 #Add Port Scan For All Found IPs
 read IP < ip.txt
-for i in {1..254} ;do ping -c 1 $IP.$i | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" & done > Network.txt
+for i in {1..254} ;do ping -c 1 $IP.$i | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" & done > Network.txt # for p in {1..1000} ;do curl -s $IP.$i:$p >/dev/null && echo $p Success. & done  > Network.txt
   cat Network.txt
+echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
+echo "$(tput setaf 0)$(tput setab 4)        ####     Curl Port Scan      ####       $(tput sgr 0)"
+echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
+echo "Make Some Tea My Little Pea, This Might Take Some Time...."
+
+input="Network.txt"
+while IFS= read -r IPS
+  do
+    for p in {1..2000} ;do curl -s $IPS:$p >/dev/null && echo $IPS:$p OPEN & done  >> Port.txt
+  done < "$input"
+cat Port.txt
 echo "IP Adresses saved to Network.txt"
 
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
@@ -195,10 +205,7 @@ echo "$(tput setaf 0)$(tput setab 4)        ########Running Processes########   
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 ps aux
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 echo "$(tput setaf 0)$(tput setab 4)        ######       Versions      ######       $(tput sgr 0)"
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
@@ -216,8 +223,6 @@ echo "$(tput setaf 0)$(tput setab 4)        ########   Dirty Pipe?   ########   
 echo "$(tput setaf 4)$(tput setab 2)        #################################       $(tput sgr 0)"
 #Not My Code But Useful
 dpipe
-echo ""
-exit
 }
 
 #Arguments
