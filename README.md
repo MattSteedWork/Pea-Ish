@@ -26,13 +26,14 @@
 Pea-Ish is an automated Bash script that grabs the following potentially helpful information from a compromised machine. 
 
 1. Netwrok Ping Sweep
-2. Prints Linux Version
-3. Whoami/ID
-4. Prints SUIDs
-5. Prints Passwd (Stripping out all No Login)
-6. Prints Running Processes
-7. Prints Versions Of Sudo/Mysql/Apache
-8. Checks If Vulnerable to Dirty Pipe
+2. Simple Curl Port Scan
+3. Prints Linux Version
+4. Whoami/ID
+5. Prints SUIDs
+6. Prints Passwd (Stripping out all No Login)
+7. Prints Running Processes
+8. Prints Versions Of Sudo/Mysql/Apache
+9. Checks If Vulnerable to Dirty Pipe
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
